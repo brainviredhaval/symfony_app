@@ -1,0 +1,21 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+user_home:
+    path: "/"
+    defaults: {_controller: AppBundle:User:index}
+user_create:
+    path: "user/create"
+    defaults: {_controller: AppBundle:User:create}
+user_edit:
+    path: "user/{user_id}/edit"
+    defaults: {_controller: AppBundle:User:edit}
+article_home:
+    path: "/articles"
+    defaults: {_controller: AppBundle:Article:list}
+article_create:
+    path: "article/create"
+    defaults: {_controller: AppBundle:Article:create}
+article_store:
+    path: "article/store"
+    defaults: {_controller: AppBundle:Article:store}

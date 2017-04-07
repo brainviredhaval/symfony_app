@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <fieldset>
+        <legend>{{ 'New article block' }}</legend>
+        {{ form_start(form,{action: path('article_store')}) }}
+        {{ form_errors(form) }}
+        {{ form_widget(form) }}
+        <button class="btn btn-primary" type="submit">{{ 'Submit' }}</button>
+        {{ form_end(form) }}
+    </fieldset>
+{% endblock %}

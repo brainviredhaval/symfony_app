@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div class="container" style="margin-top: 70px;">
+        <a href="{{ path('article_create') }}" class="btn btn-primary btn-sm pull-right">New Article</a>
+        <div class="col-sm-12">
+            {% for article in articles %}
+            <div class="row">
+                <h4 class="text-info">{{ article.title|upper }}</h4>
+                <p class="text-justify">{{ article.description }}</p>
+                <p class="text-right">{{ article.createdAt|date('d-M, Y') }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
